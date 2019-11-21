@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    card_view:contentPadding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ProgressBar
+            android:id="@+id/circularProgressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progress_barr"
+            android:secondaryProgress="100"
+            android:layout_margin="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="25%"
+            android:maxLines="1"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressbar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressbar"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressbar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressbar" />
+
+        <TextView
+            android:id="@+id/total_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Users Now"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressbar"
+            app:layout_constraintStart_toEndOf="@+id/circularProgressbar"
+            app:layout_constraintBottom_toTopOf="@+id/total"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/total_name_text_size"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000 User"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/total_name"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressbar"
+            app:layout_constraintStart_toEndOf="@+id/circularProgressbar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/register_text_size"/>
+
+        <TextView
+            android:id="@+id/target_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target Users 2000 user"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/less_users"/>
+
+        <TextView
+            android:id="@+id/less_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="less 1000 users"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/target_users"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

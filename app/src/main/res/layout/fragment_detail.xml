@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorPrimaryDark"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar1_text"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar2_text"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar3"
+            app:layout_constraintStart_toEndOf="@+id/progressBar1"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="90"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar3_text"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar4"
+            app:layout_constraintStart_toEndOf="@+id/progressBar2"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar4_text"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar5"
+            app:layout_constraintStart_toEndOf="@+id/progressBar3"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar5"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="80"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar5_text"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar6"
+            app:layout_constraintStart_toEndOf="@+id/progressBar4"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+        <ProgressBar
+            android:id="@+id/progressBar6"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="40"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar6_text"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar7"
+            app:layout_constraintStart_toEndOf="@+id/progressBar5"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+        <ProgressBar
+            android:id="@+id/progressBar7"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="60"
+            android:progressDrawable="@drawable/vertical_progress_barr"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar7_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/progressBar6"
+            app:layout_constraintTop_toBottomOf="@+id/period" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/spinner_square"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/period"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/chart_users" >
+
+            <Spinner
+                android:id="@+id/type_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender"
+                android:layout_marginStart="15dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:backgroundTint="@android:color/white"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/chart_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Chart Users"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/total_name_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view" />
+
+        <TextView
+            android:id="@+id/period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In 2012 - 2018"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/chart_users"
+            app:layout_constraintTop_toBottomOf="@+id/chart_users" />
+
+        <TextView
+            android:id="@+id/progressBar1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2012"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar1"
+            app:layout_constraintStart_toStartOf="@+id/progressBar1" />
+
+        <TextView
+            android:id="@+id/progressBar2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar2"
+            app:layout_constraintStart_toStartOf="@+id/progressBar2" />
+
+        <TextView
+            android:id="@+id/progressBar3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2014"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar3"
+            app:layout_constraintStart_toStartOf="@+id/progressBar3" />
+
+        <TextView
+            android:id="@+id/progressBar4_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar4"
+            app:layout_constraintStart_toStartOf="@+id/progressBar4" />
+
+        <TextView
+            android:id="@+id/progressBar5_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar5"
+            app:layout_constraintStart_toStartOf="@+id/progressBar5" />
+
+        <TextView
+            android:id="@+id/progressBar6_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar6"
+            app:layout_constraintStart_toStartOf="@+id/progressBar6" />
+
+        <TextView
+            android:id="@+id/progressBar7_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/percent_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar7"
+            app:layout_constraintStart_toStartOf="@+id/progressBar7" />
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/tools"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:contentPadding="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <ProgressBar
+                    android:id="@+id/circularProgressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/circular_progress_barr"
+                    android:secondaryProgress="100"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/total_name" />
+
+                <TextView
+                    android:id="@+id/percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="50%"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/percent_text_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressbar"
+                    app:layout_constraintEnd_toEndOf="@+id/circularProgressbar"
+                    app:layout_constraintStart_toStartOf="@+id/circularProgressbar"
+                    app:layout_constraintTop_toTopOf="@+id/circularProgressbar" />
+
+                <TextView
+                    android:id="@+id/total_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Total Users Now"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/total_name_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/target_users"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Target 2000 users"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/percent_text_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_target"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dot_target"
+                    app:layout_constraintTop_toTopOf="@+id/dot_target" />
+
+                <TextView
+                    android:id="@+id/less_users"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="less 1000 users"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/percent_text_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_less"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dot_less"
+                    app:layout_constraintTop_toTopOf="@+id/dot_less" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Lorem Ipsum is simply dummy text of the print ing and type setting industry. Lorem Ipsum has been the industry's. "
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/percent_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/circularProgressbar" />
+
+                <View
+                    android:id="@+id/dot_target"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/item_square"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_less"
+                    app:layout_constraintStart_toEndOf="@+id/circularProgressbar" />
+
+                <View
+                    android:id="@+id/dot_less"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/item_square"
+                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressbar"
+                    app:layout_constraintStart_toEndOf="@+id/circularProgressbar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.90" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
